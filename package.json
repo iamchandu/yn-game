@@ -1,0 +1,27 @@
+{
+  "name": "yantranet",
+  "version": "1.0.0",
+  "description": "game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-dev-server --entry ./src/app/app.js --output-filename ./dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamchandu/yn-game.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "chandu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamchandu/yn-game/issues"
+  },
+  "homepage": "https://github.com/iamchandu/yn-game#readme",
+  "devDependencies": {
+    "webpack": "^4.0.1",
+    "webpack-dev-server": "^3.1.0"
+  }
+}

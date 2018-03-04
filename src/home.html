@@ -1,0 +1,95 @@
+<div  ng-controller="home as homectrl">
+	<div class='col-sm-6'>
+		<div class='panel panel-info'>
+			<div class="panel-heading">
+				<div class="panel-title ">
+					<div>Score : {{homectrl.score}}</div>
+					<div class='pull-right'>End in :<b>{{homectrl.counter}}</b> sec</div>
+					<div>Level : {{homectrl.level}}</div>
+				</div>
+			</div>
+			<div class="col-sm-12 panel-body">
+				<div class='col-sm-8'>
+					<div class='col-sm-3' ng-repeat="shapes in homectrl.allshapeswithcolor"  ng-click="homectrl.identify($index)">
+						<svg height="100" width="100" ng-if="shapes.shape.shape == 'circle'">
+							<g id="g_{{$index}}" ng-cloak >
+								<circle cx="40" cy="40" r="30" stroke="black" stroke-width="2" fill={{shapes.color}} />
+							</g>
+						</svg>
+						<svg height="100" width="100" ng-if="shapes.shape.shape == 'rect'">
+							<g id="g_{{$index}}" ng-cloak >
+								<rect width="50" height="50" stroke="black" stroke-width="2" fill={{shapes.color}} />
+							</g>
+						</svg>
+						<svg height="100" width="100" ng-if="shapes.shape.shape == 'ellipse'">
+							<g id="g_{{$index}}" ng-cloak>
+								<ellipse cx="40" cy="40" rx="40" ry="25" stroke="black" stroke-width="2" fill={{shapes.color}} />
+							</g>
+						</svg>
+						<svg height="100" width="100" ng-if="shapes.shape.shape == 'polygon'">
+							<g id="g_{{$index}}" ng-cloak >
+								<polygon points="30,10 10,60 60,60" stroke="black" stroke-width="2" fill={{shapes.color}} />
+							</g>
+						</svg>
+					</div>
+				</div>
+				<div class="col-sm-4">
+						<div class='col-sm-12' ng-repeat="temp in homectrl.sideshapes">
+						<div class='col-sm-12 sidepan' id="g_{{$index}}">
+							<div class="col-sm-6">
+								<svg height="70" width="100" ng-if="temp.first.shape.shape == 'circle'">
+									<g  ng-cloak >
+										<circle cx="40" cy="40" r="30" stroke="black" stroke-width="2" fill={{temp.first.color}} />
+									</g>
+								</svg>
+								<svg height="50" width="100" ng-if="temp.first.shape.shape == 'rect'">
+									<g id="g_{{$index}}" ng-cloak >
+										<rect width="50" height="50" stroke="black" stroke-width="2" fill={{temp.first.color}} />
+									</g>
+								</svg>
+								<svg height="50" width="100" ng-if="temp.first.shape.shape == 'ellipse'">
+									<g id="g_{{$index}}" ng-cloak>
+										<ellipse cx="40" cy="40" rx="40" ry="25" stroke="black" stroke-width="2" fill={{temp.first.color}} />
+									</g>
+								</svg>
+								<svg height="50" width="100" ng-if="temp.first.shape.shape == 'polygon'">
+									<g id="g_{{$index}}" ng-cloak >
+										<polygon points="30,10 10,60 60,60" stroke="black" stroke-width="2" fill={{temp.first.color}} />
+									</g>
+								</svg>
+							</div>
+							<div class="col-sm-6">
+								<svg height="100" width="100" ng-if="temp.second.shape.shape == 'circle'">
+									<g  ng-cloak >
+										<circle cx="40" cy="40" r="30" stroke="black" stroke-width="2" fill={{temp.second.color}} />
+									</g>
+								</svg>
+								<svg height="100" width="100" ng-if="temp.second.shape.shape == 'rect'">
+									<g id="g_{{$index}}" ng-cloak >
+										<rect width="50" height="50" stroke="black" stroke-width="2" fill={{temp.second.color}} />
+									</g>
+								</svg>
+								<svg height="100" width="100" ng-if="temp.second.shape.shape == 'ellipse'">
+									<g id="g_{{$index}}" ng-cloak>
+										<ellipse cx="40" cy="40" rx="40" ry="25" stroke="black" stroke-width="2" fill={{temp.second.color}} />
+									</g>
+								</svg>
+								<svg height="100" width="100" ng-if="temp.second.shape.shape == 'polygon'">
+									<g id="g_{{$index}}" ng-cloak >
+										<polygon points="30,10 10,60 60,60" stroke="black" stroke-width="2" fill={{temp.second.color}} />
+									</g>
+								</svg>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		
+	</div>
+</div>

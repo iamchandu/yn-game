@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Yantra Net</title>
+		<link href="resource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="resource/style.css" rel="stylesheet">
+		<script src="resource/jquery-3.1.1.min.js"></script>
+		<script src="resource/bootstrap/js/bootstrap.min.js"></script>
+		<script src="resource/angular.min.js"></script>
+		<script src="resource/angular-route.js"></script>
+		<script src="resource/angular-cookies.js"></script>
+		<script src="app/app.js"></script>
+		<script src="resource/angularjs-crypto.js"></script>
+		<script src="resource/CryptoJSCipher.js"></script>
+		<script src="resource/SweetAlert.min.js"></script>
+		<!-- cryptojs aes files -->
+    	<script type='text/javascript' src="resource/aes.js"></script>	
+	</head>
+	<body ng-app="yn">
+		<header></header>
+			<div class="loading" ng-show="loading" >
+				<div class="loading-spiner">
+					<img class="col-sm-offset-5" src="resource/spinner.gif" />
+				</div>
+			</div>
+			<div class="container">
+				<div ng-view></div>
+			</div>
+	
+		<footer> </footer>
+	</body>
+</html>
