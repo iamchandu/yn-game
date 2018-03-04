@@ -101,9 +101,13 @@
     
     vm.countdown = function() {
       stopped = $timeout(function() {
-         console.log(vm.counter);
+         //console.log(vm.counter);
         if(vm.counter == 0){
-          alert('Game Over.');
+          //alert('Time UP. Game Over.');
+          swal({
+            title: "Game Over.",
+            icon: "info"
+          });
           vm.step = 0;
           vm.score=0;
           vm.level=1;
@@ -126,6 +130,7 @@
 
     vm.countdown();
     vm.identify = function(ind){
+      //document.getElementById("g_"+ind).style.color = "blue";
       vm.tempshapes.push(vm.allshapeswithcolor[ind]);
       var st = false;
       if(vm.tempshapes.length == 2){
@@ -147,7 +152,11 @@
           vm.sideshapes.push({'first' : vm.generateshapes(),'second' : vm.generateshapes()});
           vm.score+=10;
           if(Math.floor(vm.step/10)+1>vm.level){
-            alert('Congradulations..... Your going to next round.');
+            //alert('Congradulations..... Your going to next round.');
+            swal({
+              title: "Congratulations. You are going to next round.",
+              icon: "success"
+            });
             vm.step = 0;
             vm.level+=1;
             vm.allshapeswithcolor = [];

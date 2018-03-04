@@ -47,6 +47,9 @@ select.ng-valid {
     border-left: 2px solid black;
 }
 
-.sidepan2{
+.grndpan{
     border-bottom: 2px solid black;
+}
+.grndpan2{
+    padding-top:5px;
 }
